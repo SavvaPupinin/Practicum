@@ -1,5 +1,8 @@
 import socket, getpass, sys, random, csv, threading, os, time
 
+LOCK = threading.Lock()
+L_FLAG = True
+
 def send1(sock, data):
     sock.send(data.encode())
 
@@ -93,8 +96,7 @@ def connecting():
                         threading.Thread(target = lstn, args = (conn, addr), daemon = True).start()
 
 users_list = []
-LOCK = threading.Lock()
-L_FLAG = True
+
 CON_FLAG = True
 history = f"history_{time.time()}.txt"
 threading.Thread(target = connecting, daemon = True).start()
