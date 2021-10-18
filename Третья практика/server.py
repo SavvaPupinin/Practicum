@@ -17,10 +17,11 @@ main_stdout = sys.stdout
 sys.stdout = open('log.txt', 'w')
 print("Запуск сервера")
 sock = socket.socket()
-port=int(getpass.getpass(prompt = 'Введите порт: '))
+port=getpass.getpass(prompt = 'Введите порт: ')
 if not port:
         port = 9090
-
+else:
+    port = int(port)
 # port = 9090
 
 while True:

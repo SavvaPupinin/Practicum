@@ -25,16 +25,18 @@ def recieving():
 LOCK = threading.Lock()
 sock = socket.socket()
 sock.setblocking(1)
-# port = int(getpass.getpass(prompt = 'Введите порт: '))
-# host = getpass.getpass(prompt = 'Введите хост: ')
-# if not port:
-#     port = 9090
-# if not host:
-#     host = 'localhost'
+port = getpass.getpass(prompt = 'Введите порт: ')
+host = getpass.getpass(prompt = 'Введите хост: ')
+if not port:
+    port = 9090
+else:
+    port = int(port)
+if not host:
+    host = 'localhost'
 
 
 
-host, port = 'localhost', 9090
+# host, port = 'localhost', 9090
 print("Соединение с сервером")
 sock.connect((host, port))
 print("Соединено с сервером")
