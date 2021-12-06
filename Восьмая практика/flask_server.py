@@ -34,13 +34,13 @@ def check_user(req_from):
 	password = req_from["password"]
 	curr_pass = dmp.get(email)
 	if not curr_pass:
-		return response(False,"Нет такого пользователя")
+		return response(False,"Not such username")
 	curr_pass = curr_pass["password"]
 	checked = hasher(password, curr_pass[0])
 	if curr_pass == checked:
-		return response(True, "Успешно авторизовались")
+		return response(True, "Succsessfull")
 	else:
-		return response(False, "another password", "Invalid password")
+		return response(False, "Invalid password")
 
 
 def saver(dmp):
@@ -85,11 +85,11 @@ def reg():
 	dmp = loader()
 	if not bool(dmp.get(req_from["email"])):
 		if saveInfo(req_from):
-			return response(True, "зарегистрирован")
+			return response(True, "registered")
 		else:
-			return response(False,"Буквы цифры и _ разрешены в пароле" )
+			return response(False,"letters and numbers might be in password" )
 	else:
-		return response(False,"Такой пользователь уже существует")
+		return response(False,"User has already registered")
 
 
 
