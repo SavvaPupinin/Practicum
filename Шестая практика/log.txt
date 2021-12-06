@@ -155,3 +155,8 @@ Mon, 06 Dec 2021 09:49:28 GMT; 127.0.0.1; /images/168.png; 403 Forbidden
 Mon, 06 Dec 2021 09:49:28 GMT; 127.0.0.1; /favicon.ico; 403 Forbidden
 Mon, 06 Dec 2021 09:50:09 GMT; 127.0.0.1; /test.pdf; 200 OK
 Mon, 06 Dec 2021 09:50:09 GMT; 127.0.0.1; /favicon.ico; 403 Forbidden
+Mon, 06 Dec 2021 09:57:06 GMT; 127.0.0.1; /net.file; 403 Forbidden
+Mon, 06 Dec 2021 09:57:18 GMT; 127.0.0.1; /noSuchFile.html; 404 Not Found
+Mon, 06 Dec 2021 09:59:08 GMT; 127.0.0.1; /noSuchFile.file; 403 Forbidden
+Mon, 06 Dec 2021 09:59:46 GMT; 127.0.0.1; /nissan.jpg; 200 OK
+Mon, 06 Dec 2021 09:59:46 GMT; 127.0.0.1; /favicon.ico; 403 Forbidden
